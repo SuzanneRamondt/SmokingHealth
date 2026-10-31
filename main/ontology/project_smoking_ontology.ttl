@@ -12,93 +12,81 @@
 #    Object Properties
 #################################################################
 
-###  http://example.org/smoking-health-ontology#hasOrgan
-<http://example.org/smoking-health-ontology#hasOrgan> rdf:type owl:ObjectProperty ;
-                                                      rdfs:subPropertyOf owl:topObjectProperty ;
-                                                      rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C16960> ;
-                                                      rdfs:range <http://purl.obolibrary.org/obo/NCIT_C13018> ;
-                                                      rdfs:label "hasOrgan"@en .
+###  http://purl.obolibrary.org/obo/BFO_0000050
+<http://purl.obolibrary.org/obo/BFO_0000050> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C135508> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/NCIT_C16669> ;
+                                             rdfs:label "isPartOf"@en .
 
 
-###  urn:absolute:h/affectsOrgan
-:affectsOrgan rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf owl:topObjectProperty ;
-              owl:inverseOf :hasCondition ;
-              rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C135508> ;
-              rdfs:range <http://purl.obolibrary.org/obo/NCIT_C13018> ;
-              rdfs:label "affectsOrgan"@en .
+###  http://purl.obolibrary.org/obo/BFO_0000051
+<http://purl.obolibrary.org/obo/BFO_0000051> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C16960> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/NCIT_C13018> ;
+                                             rdfs:label "hasOrgan"@en .
 
 
-###  urn:absolute:h/contains
-:contains rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf owl:topObjectProperty ;
-          rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C135508> ;
-          rdfs:range <http://purl.obolibrary.org/obo/NCIT_C16669> ;
-          rdfs:label "isPartOf"@en .
+###  http://purl.obolibrary.org/obo/RO_0000053
+<http://purl.obolibrary.org/obo/RO_0000053> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf owl:topObjectProperty ;
+                                            owl:inverseOf <http://semanticscience.org/resource/SIO_000425> ;
+                                            rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C13018> ;
+                                            rdfs:range <http://purl.obolibrary.org/obo/NCIT_C135508> ;
+                                            rdfs:label "hasCondition"@en .
 
 
-###  urn:absolute:h/exhibits
-:exhibits rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf owl:topObjectProperty ;
-          rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C16960> ;
-          rdfs:range <http://purl.obolibrary.org/obo/NCIT_C20134> ;
-          rdfs:label "exhibits"@en .
+###  http://purl.obolibrary.org/obo/RO_0000056
+<http://purl.obolibrary.org/obo/RO_0000056> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf owl:topObjectProperty ;
+                                            rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C16960> ;
+                                            rdfs:range <http://purl.obolibrary.org/obo/NCIT_C20134> ;
+                                            rdfs:label "exhibits"@en .
 
 
-###  urn:absolute:h/hasAlcoholConsumption
-:hasAlcoholConsumption rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf owl:topObjectProperty ;
-                       rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C16669> ;
-                       rdfs:range :alcoholConsumptionStatus .
+###  http://semanticscience.org/resource/SIO_000008
+<http://semanticscience.org/resource/SIO_000008> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                                 rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C16669> ,
+                                                             <http://purl.obolibrary.org/obo/NCIT_C16960> ,
+                                                             <http://purl.obolibrary.org/obo/NCIT_C20134> ;
+                                                 rdfs:range <http://purl.obolibrary.org/obo/NCIT_C16273> ,
+                                                            <http://purl.obolibrary.org/obo/NCIT_C16669> ,
+                                                            <http://purl.obolibrary.org/obo/NCIT_C19796> ,
+                                                            <http://purl.obolibrary.org/obo/NCIT_C54706> ;
+                                                 rdfs:label "hasAlcoholConsumption"@en ,
+                                                            "hasBPRisk"@en ,
+                                                            "hasHealthStatus"@en ,
+                                                            "hasSmokingStatus"@en .
 
 
-###  urn:absolute:h/hasBPRisk
-:hasBPRisk rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf owl:topObjectProperty ;
-           rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C16669> ;
-           rdfs:range :BPRiskStatus .
-
-
-###  urn:absolute:h/hasCondition
-:hasCondition rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf owl:topObjectProperty ;
-              rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C13018> ;
-              rdfs:range <http://purl.obolibrary.org/obo/NCIT_C135508> .
-
-
-###  urn:absolute:h/hasHealthStatus
-:hasHealthStatus rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf owl:topObjectProperty ;
-                 rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C16960> ;
-                 rdfs:range <http://purl.obolibrary.org/obo/NCIT_C16669> ;
-                 rdfs:label "hasHealthStatus"@en .
-
-
-###  urn:absolute:h/hasSmokingStatus
-:hasSmokingStatus rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf owl:topObjectProperty ;
-                  rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C20134> ;
-                  rdfs:range :smokingStatus .
+###  http://semanticscience.org/resource/SIO_000425
+<http://semanticscience.org/resource/SIO_000425> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                                 rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C135508> ;
+                                                 rdfs:range <http://purl.obolibrary.org/obo/NCIT_C13018> ;
+                                                 rdfs:label "affectsOrgan"@en .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://example.org/smoking-health-ontology#hasCholesterolLevel
-<http://example.org/smoking-health-ontology#hasCholesterolLevel> rdf:type owl:DatatypeProperty ;
-                                                                 rdfs:subPropertyOf owl:topDataProperty ;
-                                                                 rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C16669> ;
-                                                                 rdfs:range xsd:float ;
-                                                                 rdfs:label "cholesterolLevel"@en .
+###  http://addictovocab.org/ADDICTO_0000690
+<http://addictovocab.org/ADDICTO_0000690> rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                          rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C20134> ;
+                                          rdfs:range xsd:integer ;
+                                          rdfs:label "hasCigarettesPerDay"@en .
 
 
-###  http://example.org/smoking-health-ontology#hasCigarettesPerDay
-<http://example.org/smoking-health-ontology#hasCigarettesPerDay> rdf:type owl:DatatypeProperty ;
-                                                                 rdfs:subPropertyOf owl:topDataProperty ;
-                                                                 rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C20134> ;
-                                                                 rdfs:range xsd:integer ;
-                                                                 rdfs:label "hasCigarettesPerDay"@en .
+###  http://addictovocab.org/ADDICTO_0000694
+<http://addictovocab.org/ADDICTO_0000694> rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                          rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C20134> ;
+                                          rdfs:range xsd:integer ;
+                                          rdfs:label "yearsOfSmoking"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C16358
@@ -133,20 +121,20 @@
                                              rdfs:label "age"@en .
 
 
-###  urn:absolute:h/hasPatientID
-:hasPatientID rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C16960> ;
-              rdfs:range xsd:integer ;
-              rdfs:label "patientID"@en .
+###  http://purl.obolibrary.org/obo/OBA_VT0003947
+<http://purl.obolibrary.org/obo/OBA_VT0003947> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                               rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C16669> ;
+                                               rdfs:range xsd:float ;
+                                               rdfs:label "cholesterolLevel"@en .
 
 
-###  urn:absolute:h/hasYearsOfSmoking
-:hasYearsOfSmoking rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf owl:topDataProperty ;
-                   rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C20134> ;
-                   rdfs:range xsd:integer ;
-                   rdfs:label "yearsOfSmoking"@en .
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                      rdfs:domain <http://purl.obolibrary.org/obo/NCIT_C16960> ;
+                                      rdfs:range xsd:integer ;
+                                      rdfs:label "patientID"@en .
 
 
 #################################################################
@@ -187,6 +175,11 @@
                                               rdfs:label "organCondition"@en .
 
 
+###  http://purl.obolibrary.org/obo/NCIT_C16273
+<http://purl.obolibrary.org/obo/NCIT_C16273> rdf:type owl:Class ;
+                                             rdfs:label "alcoholConsumption"@en .
+
+
 ###  http://purl.obolibrary.org/obo/NCIT_C16669
 <http://purl.obolibrary.org/obo/NCIT_C16669> rdf:type owl:Class ;
                                              rdfs:label "healthStatus"@en .
@@ -197,24 +190,19 @@
                                              rdfs:label "Patient"@en .
 
 
+###  http://purl.obolibrary.org/obo/NCIT_C19796
+<http://purl.obolibrary.org/obo/NCIT_C19796> rdf:type owl:Class ;
+                                             rdfs:label "smokingStatus"@en .
+
+
 ###  http://purl.obolibrary.org/obo/NCIT_C20134
 <http://purl.obolibrary.org/obo/NCIT_C20134> rdf:type owl:Class ;
                                              rdfs:label "smokingBehaviour"@en .
 
 
-###  urn:absolute:h/BPRiskStatus
-:BPRiskStatus rdf:type owl:Class ;
-              rdfs:label "BPRisk"@en .
-
-
-###  urn:absolute:h/alcoholConsumptionStatus
-:alcoholConsumptionStatus rdf:type owl:Class ;
-                          rdfs:label "alcoholConsumption"@en .
-
-
-###  urn:absolute:h/smokingStatus
-:smokingStatus rdf:type owl:Class ;
-               rdfs:label "smokingStatus"@en .
+###  http://purl.obolibrary.org/obo/NCIT_C54706
+<http://purl.obolibrary.org/obo/NCIT_C54706> rdf:type owl:Class ;
+                                             rdfs:label "BPRisk"@en .
 
 
 #################################################################
@@ -223,55 +211,55 @@
 
 ###  http://purl.obolibrary.org/obo/NCIT_C102401
 <http://purl.obolibrary.org/obo/NCIT_C102401> rdf:type owl:NamedIndividual ,
-                                                       :BPRiskStatus ;
+                                                       <http://purl.obolibrary.org/obo/NCIT_C54706> ;
                                               rdfs:label ":High_BP" .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C102402
 <http://purl.obolibrary.org/obo/NCIT_C102402> rdf:type owl:NamedIndividual ,
-                                                       :BPRiskStatus ;
+                                                       <http://purl.obolibrary.org/obo/NCIT_C54706> ;
                                               rdfs:label ":Normal_BP" .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C102403
 <http://purl.obolibrary.org/obo/NCIT_C102403> rdf:type owl:NamedIndividual ,
-                                                       :BPRiskStatus ;
+                                                       <http://purl.obolibrary.org/obo/NCIT_C54706> ;
                                               rdfs:label ":Low_BP" .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C156820
 <http://purl.obolibrary.org/obo/NCIT_C156820> rdf:type owl:NamedIndividual ,
-                                                       :alcoholConsumptionStatus ;
+                                                       <http://purl.obolibrary.org/obo/NCIT_C16273> ;
                                               rdfs:label ":Moderate_Alcohol" .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C156821
 <http://purl.obolibrary.org/obo/NCIT_C156821> rdf:type owl:NamedIndividual ,
-                                                       :alcoholConsumptionStatus ;
+                                                       <http://purl.obolibrary.org/obo/NCIT_C16273> ;
                                               rdfs:label ":High_Alcohol" .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C156822
 <http://purl.obolibrary.org/obo/NCIT_C156822> rdf:type owl:NamedIndividual ,
-                                                       :alcoholConsumptionStatus ;
+                                                       <http://purl.obolibrary.org/obo/NCIT_C16273> ;
                                               rdfs:label ":Low_Alcohol" .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C156830
 <http://purl.obolibrary.org/obo/NCIT_C156830> rdf:type owl:NamedIndividual ,
-                                                       :smokingStatus ;
+                                                       <http://purl.obolibrary.org/obo/NCIT_C19796> ;
                                               rdfs:label ":Former" .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C65108
 <http://purl.obolibrary.org/obo/NCIT_C65108> rdf:type owl:NamedIndividual ,
-                                                      :smokingStatus ;
+                                                      <http://purl.obolibrary.org/obo/NCIT_C19796> ;
                                              rdfs:label ":Never" .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C67147
 <http://purl.obolibrary.org/obo/NCIT_C67147> rdf:type owl:NamedIndividual ,
-                                                      :smokingStatus ;
+                                                      <http://purl.obolibrary.org/obo/NCIT_C19796> ;
                                              rdfs:label ":Current" .
 
 
